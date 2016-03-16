@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,65 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aax-eG-S7v">
+                                <rect key="frame" x="0.0" y="20" width="600" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="568" id="zq6-mH-3so"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H2V-pa-c7W">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hTY-Er-cVE" userLabel="contentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="568"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="子View都放在这里" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="doa-GW-Iuq">
+                                                <rect key="frame" x="0.0" y="274" width="600" height="21"/>
+                                                <color key="backgroundColor" red="0.99215686270000003" green="0.32156862749999998" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="5zX-Zc-OrI"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="doa-GW-Iuq" secondAttribute="trailing" id="F0t-oq-q3O"/>
+                                            <constraint firstItem="doa-GW-Iuq" firstAttribute="centerX" secondItem="hTY-Er-cVE" secondAttribute="centerX" id="bDQ-Jq-750"/>
+                                            <constraint firstItem="doa-GW-Iuq" firstAttribute="leading" secondItem="hTY-Er-cVE" secondAttribute="leading" id="ddN-68-FUx"/>
+                                            <constraint firstItem="doa-GW-Iuq" firstAttribute="centerY" secondItem="hTY-Er-cVE" secondAttribute="centerY" id="zLG-A4-hp0"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="hTY-Er-cVE" firstAttribute="leading" secondItem="H2V-pa-c7W" secondAttribute="leading" id="FlC-uk-D4S"/>
+                                    <constraint firstItem="hTY-Er-cVE" firstAttribute="top" secondItem="H2V-pa-c7W" secondAttribute="top" id="Q11-6C-95W"/>
+                                    <constraint firstAttribute="bottom" secondItem="hTY-Er-cVE" secondAttribute="bottom" id="eto-IX-yhg"/>
+                                    <constraint firstAttribute="trailing" secondItem="hTY-Er-cVE" secondAttribute="trailing" id="owV-Iq-ifX"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="H2V-pa-c7W" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6ic-Wb-uUN"/>
+                            <constraint firstItem="hTY-Er-cVE" firstAttribute="width" secondItem="aax-eG-S7v" secondAttribute="width" id="O94-v3-cpb"/>
+                            <constraint firstItem="aax-eG-S7v" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gV6-cd-RQ0"/>
+                            <constraint firstItem="H2V-pa-c7W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gjy-bZ-LmA"/>
+                            <constraint firstItem="aax-eG-S7v" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="jt1-Iq-YeN"/>
+                            <constraint firstAttribute="trailing" secondItem="H2V-pa-c7W" secondAttribute="trailing" id="kdg-nS-WER"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="H2V-pa-c7W" secondAttribute="bottom" id="vrL-i7-dMn"/>
+                            <constraint firstItem="hTY-Er-cVE" firstAttribute="height" secondItem="aax-eG-S7v" secondAttribute="height" id="wam-aa-PDs"/>
+                            <constraint firstAttribute="trailing" secondItem="aax-eG-S7v" secondAttribute="trailing" id="wte-BP-CY1"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="261" y="429"/>
         </scene>
     </scenes>
 </document>
