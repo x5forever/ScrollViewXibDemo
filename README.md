@@ -1,2 +1,1 @@
-简介
-此demo
+此demo演示了如何给scrollView添加约束，主要通过给anchorView和contentView设置等宽等高来确定scrollView的contentSize.之后把想要添加的子视图添加到contentView上.
